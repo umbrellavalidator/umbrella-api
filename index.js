@@ -1,4 +1,5 @@
 const { exec } = require('child_process');
+const polka = require('polka');
 const app = polka();  // Same as Express.js but might be faster.
 
 
@@ -45,4 +46,11 @@ app.get('/net_info', (req, res) => {
 
 app.get('/consensus_state', (req, res) => {
   res.end(consensusState());
+});
+
+
+const PORT = 3000;
+app.listen(PORT, err => {
+  if (err) throw err;
+  console.log(`> Running on localhost:${PORT}`);
 });
