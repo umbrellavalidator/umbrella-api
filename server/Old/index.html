@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+  <title>Umbrella Monitor Server</title>
+  <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+
+<h1>Umbrella Validator</h1>
+
+<div id="notice"> Latest Notice: {{with .Notice}} {{.}} {{end}}</div>
+
+<form action="/" method="post">
+  <div>Add Notice: <input name="notice"></div>
+  <input type="submit">
+</form>
+
+</body>
+</html>
