@@ -32,6 +32,7 @@ app.use(myParser.json());
 app.post("/", function(request, response) {
 	latest_notice=request.body.notice
 	console.log(request.body); //This prints the JSON document received (if it is a JSON document)
+	response.end("Ack")
 });
 
 app.get('/', (req, res) => {
