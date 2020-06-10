@@ -1,6 +1,6 @@
 {
   "name": "umbrella-api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/umbrellavalidator/umbrella-api#readme",
   "dependencies": {
-    "polka": "^0.5.1"
+    "apicache": "^1.5.3",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
   }
 }
