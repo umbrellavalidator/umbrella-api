@@ -16,8 +16,15 @@ app.use(bodyParser.json());
 // 6.
 // an example of a in-memory cache. An alternative: redis
 const apicache = require('apicache');
-let cache = apicache.middleware;
+
+//let cache = apicache.middleware;
+//app.use(cache('5 minutes'));
+
+// cache with redis
+const redis = require('redis');
+let cache = apicache.options({ redisClient: redis.createClient() }).middleware;
 app.use(cache('5 minutes'));
+
 
 app.get('/validators', (req, res) => {
     const validators = [];
